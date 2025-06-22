@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@variant dark (.dark &);
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+.dark *:focus {
+  outline-color: #818cf8;
+}
+
+/* Base styles for light and dark mode */
+html {
+  background-color: #ffffff;
+  color: #171717;
+}
+
+html.dark {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+body {
+  background-color: inherit;
+  color: inherit;
+}
