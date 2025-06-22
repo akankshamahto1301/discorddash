@@ -1,77 +1,135 @@
-Discord Server Admin Dashboard
-A responsive, modern dashboard built using Next.js 14, Tailwind CSS, and React to manage a Discord-like community. This project includes sections like member management, role control, and message viewing — all powered by mock data for demonstration.
+# Discord Server Admin Dashboard
 
-Features
-Dashboard overview with key server stats (members, online users, roles, messages)
+A modern, responsive Discord server administration dashboard built with Next.js 14 and Tailwind CSS. This dashboard provides a comprehensive interface for managing Discord server members, roles, and messages with a beautiful dark/light theme toggle.
 
-Member management with search, filter, sort, and pagination
 
-Role management with editable role names and color-coded badges
 
-Message viewer with mock delete and channel-based filtering
+##  Features
 
-Light and dark mode toggle with persistent theme preference
+###  Dashboard Overview
 
-Fully responsive design for desktop, tablet, and mobile
+- Real-time server statistics (members, online users, roles, messages)
+- Interactive member growth chart
+- Recent activity feed
+- Server performance metrics
 
-Tech Stack
-Next.js 14 (App Router)
+###  Member Management
 
-React
+- Searchable and filterable member list
+- Pagination for large member counts
+- Role-based filtering
+- Add new members (mock functionality)
+- Sort by join date or username
+- Online/offline status indicators
 
-Tailwind CSS
+### Role Management
 
-Lucide React Icons
+- Visual role hierarchy display
+- Toggle role visibility
+- Inline role name editing
+- Permission overview
+- Role-based color coding
+- Member count per role
 
-TypeScript
+###  Message Management
 
-React Context API with useReducer
+- Cross-channel message viewing
+- Search functionality
+- Channel-based filtering
+- Message deletion (mock)
+- Timestamp and user information
+- Channel activity statistics
 
-Project Structure
-bash
-Copy
-Edit
+###  Design & UX
+
+- **Dark/Light Mode**: Persistent theme toggle with localStorage
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
+- **Accessibility**: ARIA labels, keyboard navigation, proper contrast
+- **Smooth Animations**: Hover effects and transitions
+- **Custom Components**: Built from scratch without UI libraries
+
+##  Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **State Management**: React Context API + useReducer
+- **Language**: TypeScript
+- **Deployment Ready**: Vercel/Netlify compatible
+
+##  Getting Started
+
+### Prerequisites
+
+- Node.js 18+ installed
+- npm, yarn, or pnpm package manager
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone <repository-url>
+   cd dis-dashboard
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. **Run the development server**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+4. **Open in browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+##  Project Structure
+
+```
 src/
-├── app/            # App Router, layout, global styles
-├── components/     # Navbar, Sidebar, Layout, Pages
-├── pages/          # Dashboard, Members, Roles, Messages
-├── context/        # Global dashboard state
-├── data/           # Mock users, roles, messages
-├── utils/          # Utility functions (formatting, styling)
-Getting Started
-Clone the repository
+├── app/                    # Next.js 14 App Router
+│   ├── globals.css        # Global styles and theme
+│   ├── layout.tsx         # Root layout with providers
+│   └── page.tsx           # Main page component
+├── components/            # React components
+│   ├── pages/            # Page components
+│   │   ├── Dashboard.tsx # Main dashboard with stats
+│   │   ├── Members.tsx   # Member management
+│   │   ├── Roles.tsx     # Role management
+│   │   └── Messages.tsx  # Message management
+│   ├── DashboardLayout.tsx # Main layout wrapper
+│   ├── Navbar.tsx        # Top navigation bar
+│   └── Sidebar.tsx       # Left navigation sidebar
+├── context/              # React Context for state
+│   └── DashboardContext.tsx # Global state management
+├── data/                 # Mock data
+│   └── mockData.ts       # Sample Discord server data
+├── types/                # TypeScript definitions
+│   └── index.ts          # Type definitions
+└── utils/                # Utility functions
+    └── dashboard.ts      # Helper functions
 
-bash
-Copy
-Edit
-git clone https://github.com/akankshamahto1301/discordDashboard.git
-cd discordDashboard
-Install dependencies
+##  Deployment
 
-bash
-Copy
-Edit
-npm install
-Start the development server
+### Vercel 
 
-bash
-Copy
-Edit
-npm run dev
-Open http://localhost:3000 in your browser
+1. Push code to GitHub repository
+2. Connect repository to Vercel
+3. Deploy automatically on push.
+##  License
 
-Mock Data
-The app uses mock data stored in:
-
-bash
-Copy
-Edit
-src/data/mockData.ts
-You can customize it or replace it with real API calls and backend integration.
-
-Deployment
-This project is ready to deploy on platforms like Vercel or Netlify. Just push your repo and connect it to the deployment platform.
-
-License
-This project is open source and available for learning or demo purposes. Feel free to use, modify, and build on top of it.
+This project is open source and available under the [MIT License](LICENSE).
 
